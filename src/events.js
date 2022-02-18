@@ -41,7 +41,7 @@ exports.listen = function listen (client)
          // -----------------
 
          config = {
-            "botServer": "https://discord.gg/mgNR64R",
+            "botServer": "https://discord.gg/AcuDPZQwAj",
             "defaultLanguage": "en",
             "inviteURL": auth.invite || "Set this in your .env file / config variables in Heroku",
             "maxChainLen": 5,
@@ -73,10 +73,10 @@ exports.listen = function listen (client)
          console.log(oneLine`
          Shard: #${singleShard} Shards online -
          ${client.guilds.cache.size.toLocaleString()} guilds.`);
-
          client.user.setPresence({
             "activity": {
-               "name": "ritabot.gg | !tr help",
+               "name": "Google Translate",
+               "timestamps": {"start": Date.now()},
                "type": "PLAYING"
             },
             "status": "online"
