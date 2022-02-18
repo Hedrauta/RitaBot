@@ -75,9 +75,8 @@ exports.listen = function listen (client)
          ${client.guilds.cache.size.toLocaleString()} guilds.`);
          client.user.setPresence({
             "activity": {
-               "name": "Google Translate",
-               "timestamps": {"start": Date.now()},
-               "type": "PLAYING"
+               "name": "Chat",
+               "type": "WATCHING"
             },
             "status": "online"
          });
@@ -251,8 +250,8 @@ exports.listen = function listen (client)
 
          // console.error("DEBUG: Unhandled promise rejection:", reason);
          const err = `${`Unhandled Rejection` +
-           `\nCaused By:\n`}${reason.stack}` +
-           `\n${`Promise At:\n`}${promise.stack} `;
+            `\nCaused By:\n`}${reason.stack}` +
+            `\n${`Promise At:\n`}${promise.stack} `;
          return logger(
             "dev",
             err
